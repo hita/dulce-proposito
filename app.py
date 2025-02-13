@@ -1,7 +1,10 @@
 from flask import Flask, render_template
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, 
+    static_folder='static',  # Explicitly set static folder
+    template_folder='templates'  # Explicitly set template folder
+)
 
 @app.route('/')
 def root():
