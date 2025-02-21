@@ -22,3 +22,4 @@ jobs:
           port: 22
           source: "."
           target: "/dulceproposito"
+          debug: true  # Enable debug mode
