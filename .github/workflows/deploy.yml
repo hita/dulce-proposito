@@ -2,18 +2,22 @@ name: 🚀 Deploy website on push
 on:
   push:
     branches:
-      - main
+      - main       
 jobs:
-  web-deploy:
-    name: 🎉 Deploy
+  deploy_job:
     runs-on: ubuntu-latest
+    name: Deploy with Password
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v4
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ${{ secrets.SFTP_HOST }}
-        username: ${{ secrets.SFTP_USER }}
-        password: ${{ secrets.SFTP_PASS }}
-        target: "/dulceproposito"
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2
+
+      - name: 🚀 Deploy with Password
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.5
+        with:
+          server: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASS }}
+          port: 22
+          local_path: '.'
+          remote_path: '/dulceproposito'
+          sftp_only: true
