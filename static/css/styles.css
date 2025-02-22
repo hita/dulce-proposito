@@ -157,52 +157,29 @@ img {
     pointer-events: auto;
 }
 
+/* Hero Header */
+.hero-section h1 {
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
 /* Artisanal styling */
-.gallery-section img, .hero-section img, .about-section img {
+.gallery-section img, .about-section img {
     transform: rotate(var(--tilt-angle, -2deg));
     border: 10px solid white;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     position: relative;
 }
 
-.gallery-section img::before, .hero-section img::before, .about-section img::before {
-    content: '';
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    width: 50px;
-    height: 20px;
-    background: linear-gradient(45deg, transparent 48%, #d3d3d3 48%, #d3d3d3 52%, transparent 52%);
-    opacity: 0.5;
-    transform: translateX(-50%);
-}
-
-.gallery-section .col-md-4:nth-child(1) img { --tilt-angle: -3deg; }
-.gallery-section .col-md-4:nth-child(2) img { --tilt-angle: 2deg; }
-.gallery-section .col-md-4:nth-child(3) img { --tilt-angle: -2deg; }
-
-.hero-section img { --tilt-angle: 2deg; }
-.about-section img { --tilt-angle: -1deg; }
-
-/* Add tape effect */
-.gallery-section .col-md-4, .hero-section .col-lg-6, .about-section .col-lg-6 {
+.hero-section img {
+    border: 10px solid white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     position: relative;
 }
 
-.gallery-section .col-md-4::before,
-.hero-section .col-lg-6::before,
-.about-section .col-lg-6::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    width: 40px;
-    height: 30px;
-    background-color: rgba(255,255,255,0.6);
-    transform: translateX(-50%) rotate(var(--tape-angle, -5deg));
-    z-index: 1;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
+.gallery-section .col-md-4:nth-child(2) img { --tilt-angle: 2deg; }
+.gallery-section .col-md-4:nth-child(3) img { --tilt-angle: -2deg; }
+.about-section img { --tilt-angle: -1deg; }
 
 .gallery-section .col-md-4:nth-child(1)::before { --tape-angle: -5deg; }
 .gallery-section .col-md-4:nth-child(2)::before { --tape-angle: 3deg; }
