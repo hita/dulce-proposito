@@ -21,6 +21,3 @@ jobs:
           local_path: '.'
           remote_path: '/dulceproposito'
           sftp_only: true
-          exclude: |
-            .git*
-            README.md
