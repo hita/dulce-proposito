@@ -19,5 +19,5 @@ jobs:
           password: ${{ secrets.SFTP_PASS }}
           port: 22
           local_path: '.'
-          remote_path: '/dulceproposito'
+          remote_path: '/'
           sftp_only: true
