@@ -160,7 +160,7 @@ img {
 /* Background Pattern */
 body {
     position: relative;
-    background-image: url('../img/magdalena.png');
+    background-image: url('/static/img/magdalena.png');
     background-repeat: repeat;
     background-size: 100px auto;
     background-position: calc(100% - 150px) 150px;
