@@ -2,7 +2,8 @@ name: 🚀 Deploy website on push
 on:
   push:
     branches:
-      - main       
+      - main  
+      - bgdeco
 jobs:
   deploy_job:
     runs-on: ubuntu-latest
